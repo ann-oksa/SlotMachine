@@ -6,6 +6,7 @@
 //
 
 import Foundation
+// генерирует три числа, которые будут проверяться на выигрышную комбинацию
 
 public protocol Randomizer {
     func getRandomNumber() -> Int

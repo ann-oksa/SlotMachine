@@ -20,6 +20,9 @@
 		CA6353B825406E3F008684BF /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353B725406E3F008684BF /* Counting.swift */; };
 		CA6353BD2542B5E1008684BF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353BC2542B5E0008684BF /* ProfileViewController.swift */; };
 		CA6353D02542F92F008684BF /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353CF2542F92F008684BF /* HistoryViewController.swift */; };
+		CA6353D52546B5B2008684BF /* Analyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353D42546B5B1008684BF /* Analyzer.swift */; };
+		CA6353DA2546B6F5008684BF /* WinningCombinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353D92546B6F5008684BF /* WinningCombinations.swift */; };
+		CA6353E22546C6A0008684BF /* Triplet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353E12546C6A0008684BF /* Triplet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		CA6353B725406E3F008684BF /* Counting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counting.swift; sourceTree = "<group>"; };
 		CA6353BC2542B5E0008684BF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CA6353CF2542F92F008684BF /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		CA6353D42546B5B1008684BF /* Analyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analyzer.swift; sourceTree = "<group>"; };
+		CA6353D92546B6F5008684BF /* WinningCombinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningCombinations.swift; sourceTree = "<group>"; };
+		CA6353E12546C6A0008684BF /* Triplet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triplet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,9 +158,12 @@
 		CA6353C52542B649008684BF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CA6353B725406E3F008684BF /* Counting.swift */,
 				CA6353AA25406B00008684BF /* Player.swift */,
 				CA6353AF25406B45008684BF /* Randomizer.swift */,
+				CA6353E12546C6A0008684BF /* Triplet.swift */,
+				CA6353D92546B6F5008684BF /* WinningCombinations.swift */,
+				CA6353D42546B5B1008684BF /* Analyzer.swift */,
+				CA6353B725406E3F008684BF /* Counting.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -290,13 +299,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA6353A62540613A008684BF /* GameViewController.swift in Sources */,
+				CA6353D52546B5B2008684BF /* Analyzer.swift in Sources */,
 				CA6353B825406E3F008684BF /* Counting.swift in Sources */,
 				CA63537325405F14008684BF /* AppDelegate.swift in Sources */,
 				CA6353AB25406B00008684BF /* Player.swift in Sources */,
 				CA6353B025406B45008684BF /* Randomizer.swift in Sources */,
+				CA6353E22546C6A0008684BF /* Triplet.swift in Sources */,
 				CA6353BD2542B5E1008684BF /* ProfileViewController.swift in Sources */,
 				CA63537525405F14008684BF /* SceneDelegate.swift in Sources */,
 				CA6353D02542F92F008684BF /* HistoryViewController.swift in Sources */,
+				CA6353DA2546B6F5008684BF /* WinningCombinations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
