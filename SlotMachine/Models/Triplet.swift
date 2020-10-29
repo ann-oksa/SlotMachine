@@ -13,24 +13,23 @@ class Tripplet {
     var two: Int = 0
     var three: Int = 0
     var randomizer: Randomizer
-  
     
     init(randomizer: Randomizer) {
         self.randomizer = randomizer
         changeDigitsOfTripplet()
     }
     
-//    func changeDigitsOfTripplet() {
-//        self.one = randomizer.getRandomNumber()
-//        self.two = randomizer.getRandomNumber()
-//        self.three = randomizer.getRandomNumber()
-//    }
-    
     func changeDigitsOfTripplet() {
-        self.one = 1
-        self.two = 1
-        self.three  = 1
+        self.one = randomizer.getRandomNumber()
+        self.two = randomizer.getRandomNumber()
+        self.three = randomizer.getRandomNumber()
     }
+    
+//    func changeDigitsOfTripplet() {
+//        self.one = 1
+//        self.two = 1
+//        self.three  = 1
+//    }
     
 }
 

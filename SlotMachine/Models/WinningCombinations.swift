@@ -8,7 +8,7 @@
 import Foundation
 // хранит в себе комбинации
 
-enum WinningCombination : String {
+enum WinningCombination : String, CaseIterable {
     case jackpot = "Jackpot"
     case up = "Up"
     case down = "Down"
