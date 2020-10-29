@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LUD-Tw-obe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -149,13 +149,52 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rCn-Ak-p5b">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="65" id="rCn-Ak-p5b" customClass="CustomTableViewCell" customModule="SlotMachine" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rCn-Ak-p5b" id="Q5e-eD-ptB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ndq-YR-Khy">
+                                                    <rect key="frame" x="16" y="8" width="382" height="49"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="777" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omz-iv-cnC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="28.5" height="49"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nfvhjwbefvhb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOe-im-Y2w">
+                                                            <rect key="frame" x="38.5" y="0.0" width="305" height="49"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRL-8p-pOX">
+                                                            <rect key="frame" x="353.5" y="0.0" width="28.5" height="49"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="JOe-im-Y2w" firstAttribute="centerX" secondItem="Ndq-YR-Khy" secondAttribute="centerX" id="PfZ-WJ-mUr"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ndq-YR-Khy" firstAttribute="leading" secondItem="Q5e-eD-ptB" secondAttribute="leading" constant="16" id="5gW-lI-sj1"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ndq-YR-Khy" secondAttribute="trailing" constant="16" id="Ah1-Hc-JlH"/>
+                                                <constraint firstItem="Ndq-YR-Khy" firstAttribute="top" secondItem="Q5e-eD-ptB" secondAttribute="top" constant="8" id="Hek-bA-r8z"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ndq-YR-Khy" secondAttribute="bottom" constant="8" id="wga-Of-Hn8"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="combinationLabel" destination="omz-iv-cnC" id="dEY-Oj-EVt"/>
+                                            <outlet property="nameOfComb" destination="JOe-im-Y2w" id="Eyh-TW-vRU"/>
+                                            <outlet property="pointsLabel" destination="iRL-8p-pOX" id="EOb-9L-ewd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -170,10 +209,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="History" image="note.text" catalog="system" id="pIr-Pu-LKH"/>
+                    <connections>
+                        <outlet property="tableView" destination="JGO-bU-Xbw" id="Nfv-Qa-SZt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugz-TX-cBD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2154" y="158"/>
+            <point key="canvasLocation" x="2153.6231884057975" y="157.36607142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="djS-sd-o69">

@@ -23,6 +23,7 @@
 		CA6353D52546B5B2008684BF /* Analyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353D42546B5B1008684BF /* Analyzer.swift */; };
 		CA6353DA2546B6F5008684BF /* WinningCombinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353D92546B6F5008684BF /* WinningCombinations.swift */; };
 		CA6353E22546C6A0008684BF /* Triplet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353E12546C6A0008684BF /* Triplet.swift */; };
+		CA6353F0254ACDEC008684BF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353EF254ACDEB008684BF /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		CA6353D42546B5B1008684BF /* Analyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analyzer.swift; sourceTree = "<group>"; };
 		CA6353D92546B6F5008684BF /* WinningCombinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningCombinations.swift; sourceTree = "<group>"; };
 		CA6353E12546C6A0008684BF /* Triplet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triplet.swift; sourceTree = "<group>"; };
+		CA6353EF254ACDEB008684BF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				CA6353BC2542B5E0008684BF /* ProfileViewController.swift */,
 				CA6353A52540613A008684BF /* GameViewController.swift */,
 				CA6353CF2542F92F008684BF /* HistoryViewController.swift */,
+				CA6353EF254ACDEB008684BF /* CustomTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				CA63537325405F14008684BF /* AppDelegate.swift in Sources */,
 				CA6353AB25406B00008684BF /* Player.swift in Sources */,
 				CA6353B025406B45008684BF /* Randomizer.swift in Sources */,
+				CA6353F0254ACDEC008684BF /* CustomTableViewCell.swift in Sources */,
 				CA6353E22546C6A0008684BF /* Triplet.swift in Sources */,
 				CA6353BD2542B5E1008684BF /* ProfileViewController.swift in Sources */,
 				CA63537525405F14008684BF /* SceneDelegate.swift in Sources */,
