@@ -13,9 +13,10 @@ class GameViewController: UIViewController {
     @IBOutlet weak var conbinationLable: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var goButton: UIButton!
-    var random = IntRandomizer()
-    let trip = Tripplet(randomizer: IntRandomizer())
-    let analyzer = 
+    let random = IntRandomizer()
+    var tripplet = Tripplet(randomizer: IntRandomizer())
+    var analyzer = Analyzer()
+    var counter = Counting()
     
     
     override func viewDidLoad() {
@@ -25,6 +26,18 @@ class GameViewController: UIViewController {
 }
   
     @IBAction func goButtonAction(_ sender: UIButton) {
+      //  analyzer.getWinningCombinationsFromTripplet(tripplet)
         
+        counter.count(value: analyzer.getWinningCombinationsFromTripplet(tripplet))
+        // counter.count(getWinningCombinationsFromTripplet(tripplet))
+        
+        
+        
+        numberLabel.text = String(tripplet.one) + String(tripplet.two) + String(tripplet.three)
+        conbinationLable.text = analyzer.getWinningCombinationsFromTripplet(tripplet).rawValue
+        pointsLabel.text = String(counter.currentBalance)
+        print(numberLabel.text!)
+        print(conbinationLable.text!)
     }
 }
+

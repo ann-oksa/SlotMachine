@@ -10,14 +10,34 @@ import Foundation
 
 class Analyzer {
    
-    class func getWinningCombinationsFromTripplet(_ triplet: Tripplet) -> [WinningCombination] {
+    func getWinningCombinationsFromTripplet(_ triplet: Tripplet) -> WinningCombination {
         if triplet.one == triplet.two &&  triplet.one == triplet.three {
-            return [.jackpot]
+            triplet.changeDigitsOfTripplet()
+            return .jackpot
         }
         if triplet.one < triplet.two && triplet.two < triplet.three && triplet.one < triplet.three {
-            return [.up]
+            triplet.changeDigitsOfTripplet()
+            return .up
         }
-        return [.down]
+        if triplet.one > triplet.two && triplet.two > triplet.three && triplet.one > triplet.three {
+            triplet.changeDigitsOfTripplet()
+            return .down
+        }
+        if triplet.one % 10 == 0 && triplet.two % 10 == 0 && triplet.three % 10 == 0 {
+            triplet.changeDigitsOfTripplet()
+            return .even
+        }
+        if triplet.one % 10 == 1 && triplet.two % 10 == 1 && triplet.three % 10 == 1 {
+            triplet.changeDigitsOfTripplet()
+            return .odd
+        }
+        if triplet.one + triplet.two == triplet.three {
+            triplet.changeDigitsOfTripplet()
+            return .fibonacci
+        }
+        triplet.changeDigitsOfTripplet()
+        return .nothing
     }
+    
 
 }

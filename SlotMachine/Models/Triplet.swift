@@ -9,11 +9,18 @@ import Foundation
 // создает комбинацию из трех цифр
 
 class Tripplet {
-    let one: Int
-    let two: Int
-    let three: Int
- 
+    var one: Int = 0
+    var two: Int = 0
+    var three: Int = 0
+    var randomizer: Randomizer
+  
+    
     init(randomizer: Randomizer) {
+        self.randomizer = randomizer
+        changeDigitsOfTripplet()
+    }
+    
+    func changeDigitsOfTripplet() {
         self.one = randomizer.getRandomNumber()
         self.two = randomizer.getRandomNumber()
         self.three = randomizer.getRandomNumber()

@@ -12,5 +12,9 @@ enum WinningCombination : String {
     case jackpot = "Jackpot"
     case up = "Up"
     case down = "Down"
-    
+    case nothing = "Nothing"
+    case even = "Even"
+    case odd = "Odd"
+    case fibonacci = "Fibonacci"
 }
+

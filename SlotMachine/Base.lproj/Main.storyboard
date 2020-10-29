@@ -144,8 +144,30 @@
                     <view key="view" contentMode="scaleToFill" id="fae-kf-IIe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JGO-bU-Xbw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rCn-Ak-p5b">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rCn-Ak-p5b" id="Q5e-eD-ptB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tok-dd-nfs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tok-dd-nfs" firstAttribute="trailing" secondItem="JGO-bU-Xbw" secondAttribute="trailing" id="5cP-OA-pVd"/>
+                            <constraint firstItem="JGO-bU-Xbw" firstAttribute="top" secondItem="tok-dd-nfs" secondAttribute="top" id="C3S-ub-0NI"/>
+                            <constraint firstItem="tok-dd-nfs" firstAttribute="bottom" secondItem="JGO-bU-Xbw" secondAttribute="bottom" id="USg-QN-Bft"/>
+                            <constraint firstItem="JGO-bU-Xbw" firstAttribute="leading" secondItem="tok-dd-nfs" secondAttribute="leading" id="c27-1A-1Vh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="History" image="note.text" catalog="system" id="pIr-Pu-LKH"/>
                 </viewController>
