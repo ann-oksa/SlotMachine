@@ -20,8 +20,8 @@ class Counting {
 
     var currentBalance = 0
     
-    func count(value: WinningCombination) {
-        currentBalance += points[value]!
+    func count() {
+        
     }
     
 }

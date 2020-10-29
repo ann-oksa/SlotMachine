@@ -20,10 +20,16 @@ class Tripplet {
         changeDigitsOfTripplet()
     }
     
+//    func changeDigitsOfTripplet() {
+//        self.one = randomizer.getRandomNumber()
+//        self.two = randomizer.getRandomNumber()
+//        self.three = randomizer.getRandomNumber()
+//    }
+    
     func changeDigitsOfTripplet() {
-        self.one = randomizer.getRandomNumber()
-        self.two = randomizer.getRandomNumber()
-        self.three = randomizer.getRandomNumber()
+        self.one = 1
+        self.two = 1
+        self.three  = 1
     }
     
 }

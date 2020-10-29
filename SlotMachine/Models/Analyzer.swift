@@ -9,10 +9,13 @@ import Foundation
 // анализирует выигрышная ли комбинация или нет
 
 class Analyzer {
-   
-    func getWinningCombinationsFromTripplet(_ triplet: Tripplet) -> WinningCombination {
+  
+    func getWinningCombinationsFromTripplet(_ triplet:  Tripplet ) -> WinningCombination {
+        
+        
         if triplet.one == triplet.two &&  triplet.one == triplet.three {
             triplet.changeDigitsOfTripplet()
+
             return .jackpot
         }
         if triplet.one < triplet.two && triplet.two < triplet.three && triplet.one < triplet.three {
@@ -23,12 +26,13 @@ class Analyzer {
             triplet.changeDigitsOfTripplet()
             return .down
         }
-        if triplet.one % 10 == 0 && triplet.two % 10 == 0 && triplet.three % 10 == 0 {
+        if triplet.one % 2 == 0 && triplet.two % 2 == 0 && triplet.three % 2 == 0 {
             triplet.changeDigitsOfTripplet()
             return .even
         }
-        if triplet.one % 10 == 1 && triplet.two % 10 == 1 && triplet.three % 10 == 1 {
+        if triplet.one % 2 != 0 && triplet.two % 2 != 0 && triplet.three % 2 != 0 {
             triplet.changeDigitsOfTripplet()
+            
             return .odd
         }
         if triplet.one + triplet.two == triplet.three {
@@ -38,6 +42,6 @@ class Analyzer {
         triplet.changeDigitsOfTripplet()
         return .nothing
     }
-    
+
 
 }
