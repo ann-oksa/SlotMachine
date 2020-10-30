@@ -30,10 +30,10 @@ class GameViewController: UIViewController {
        _ = analyzer.getWinningCombinationFromTriplet(triplet: triplet)
         numberLabel.text = String(triplet.one) + String(triplet.two) + String(triplet.three)
         combinationLabel.text = analyzer.message.joined(separator: "\n")
-        pointsLabel.text = String(counter.currentBalance)
+        
         print(numberLabel.text!)
         print(analyzer.message)
-        print(counter.count())
+      
     }
 }
 
