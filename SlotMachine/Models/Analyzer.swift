@@ -9,95 +9,64 @@ import Foundation
 // анализирует выигрышная ли комбинация или нет
 
 class Analyzer {
-    var msg = [String]()
     
-     func isJack(triplet: Tripplet)  {
-        if triplet.one == triplet.two &&  triplet.one == triplet.three {
+    var message = [String]()
+    
+    func isJackpot(triplet: Triplet)  {
+        if triplet.one == triplet.two && triplet.one == triplet.three {
             print("jack")
-            msg.append(WinningCombination.jackpot.rawValue)
+            message.append(WinningCombination.jackpot.rawValue)
         }
     }
     
-     func isOdd(triplet: Tripplet)  {
+    func isOdd(triplet: Triplet)  {
         if triplet.one % 2 != 0 && triplet.two % 2 != 0 && triplet.three % 2 != 0 {
             print("odd")
-            msg.append(WinningCombination.odd.rawValue)
+            message.append(WinningCombination.odd.rawValue)
         }
     }
-    func isEven(triplet: Tripplet){
+    
+    func isEven(triplet: Triplet){
         if triplet.one % 2 == 0 && triplet.two % 2 == 0 && triplet.three % 2 == 0 {
             print("even")
-            msg.append(WinningCombination.even.rawValue)
+            message.append(WinningCombination.even.rawValue)
         }
     }
     
-    func isUp(triplet: Tripplet) {
+    func isUp(triplet: Triplet) {
         if triplet.one < triplet.two && triplet.two < triplet.three && triplet.one < triplet.three {
             print("up")
-            msg.append(WinningCombination.up.rawValue)
-    }
+            message.append(WinningCombination.up.rawValue)
+        }
     }
     
-    func isDown(triplet: Tripplet) {
+    func isDown(triplet: Triplet) {
         if triplet.one > triplet.two && triplet.two > triplet.three && triplet.one > triplet.three {
             print("down")
-            msg.append(WinningCombination.down.rawValue)
-    }
+            message.append(WinningCombination.down.rawValue)
+        }
     }
     
-    func isFibonacci(triplet: Tripplet) {
+    func isFibonacci(triplet: Triplet) {
         if triplet.one + triplet.two == triplet.three {
             print("fibo")
-            msg.append(WinningCombination.fibonacci.rawValue)
-    }
+            message.append(WinningCombination.fibonacci.rawValue)
+        }
     }
     
-    func find(tripplet: Tripplet) -> [String] {
-        msg = [String]()
-        tripplet.changeDigitsOfTripplet()
-        isJack(triplet: tripplet)
-        isOdd(triplet: tripplet)
-        isEven(triplet: tripplet)
-        isUp(triplet: tripplet)
-        isDown(triplet: tripplet)
-        isFibonacci(triplet: tripplet)
-        if msg.isEmpty {
-            msg.append("Nothing")
+    func getWinningCombinationFromTriplet(triplet: Triplet) -> [String] {
+        message = [String]()
+        triplet.changeDigitsOfTriplet()
+        isJackpot(triplet: triplet)
+        isOdd(triplet: triplet)
+        isEven(triplet: triplet)
+        isUp(triplet: triplet)
+        isDown(triplet: triplet)
+        isFibonacci(triplet: triplet)
+        if message.isEmpty {
+            message.append(WinningCombination.nothing.rawValue)
         }
-        
-    return msg
+        return message
     }
-//    func getWinningCombinationsFromTripplet(_ triplet:  Tripplet ) -> WinningCombination {
-//
-//        if triplet.one == triplet.two &&  triplet.one == triplet.three {
-//            triplet.changeDigitsOfTripplet()
-//
-//            return .jackpot
-//        }
-//        if triplet.one < triplet.two && triplet.two < triplet.three && triplet.one < triplet.three {
-//            triplet.changeDigitsOfTripplet()
-//            return .up
-//        }
-//        if triplet.one > triplet.two && triplet.two > triplet.three && triplet.one > triplet.three {
-//            triplet.changeDigitsOfTripplet()
-//            return .down
-//        }
-//        if triplet.one % 2 == 0 && triplet.two % 2 == 0 && triplet.three % 2 == 0 {
-//            triplet.changeDigitsOfTripplet()
-//            return .even
-//        }
-//        if triplet.one % 2 != 0 && triplet.two % 2 != 0 && triplet.three % 2 != 0 {
-//            triplet.changeDigitsOfTripplet()
-//
-//            return .odd
-//        }
-//        if triplet.one + triplet.two == triplet.three {
-//            triplet.changeDigitsOfTripplet()
-//            return .fibonacci
-//        }
-//        triplet.changeDigitsOfTripplet()
-//        return .nothing
-//    }
-//
-
+    
 }

@@ -8,7 +8,7 @@
 import Foundation
 // создает комбинацию из трех цифр
 
-class Tripplet {
+class Triplet {
     var one: Int = 0
     var two: Int = 0
     var three: Int = 0
@@ -16,20 +16,14 @@ class Tripplet {
     
     init(randomizer: Randomizer) {
         self.randomizer = randomizer
-        changeDigitsOfTripplet()
+        changeDigitsOfTriplet()
     }
     
-    func changeDigitsOfTripplet() {
+    func changeDigitsOfTriplet() {
         self.one = randomizer.getRandomNumber()
         self.two = randomizer.getRandomNumber()
         self.three = randomizer.getRandomNumber()
     }
-    
-//    func changeDigitsOfTripplet() {
-//        self.one = 1
-//        self.two = 1
-//        self.three  = 1
-//    }
     
 }
 

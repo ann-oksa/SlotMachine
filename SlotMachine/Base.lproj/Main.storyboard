@@ -83,7 +83,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="gamecontroller.fill" catalog="system" id="JSI-1f-EP3"/>
                     <connections>
-                        <outlet property="conbinationLable" destination="ydi-kC-wVP" id="oBj-TY-Vk3"/>
+                        <outlet property="combinationLabel" destination="ydi-kC-wVP" id="7xq-0L-G1q"/>
                         <outlet property="goButton" destination="WYA-yJ-zdi" id="vP7-yw-LnF"/>
                         <outlet property="numberLabel" destination="jY7-jV-ad0" id="hxO-fH-aoQ"/>
                         <outlet property="pointsLabel" destination="Bhm-Nx-gKV" id="XzW-f6-wLr"/>
