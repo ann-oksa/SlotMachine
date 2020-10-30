@@ -28,11 +28,12 @@ class GameViewController: UIViewController {
     @IBAction func goButtonAction(_ sender: UIButton) {
     
        _ = analyzer.getWinningCombinationFromTriplet(triplet: triplet)
+        counter.countPointsFromCombination(combinations: analyzer.nameOfCombination)
         numberLabel.text = String(triplet.one) + String(triplet.two) + String(triplet.three)
-        combinationLabel.text = analyzer.message.joined(separator: "\n")
-        
-        print(numberLabel.text!)
-        print(analyzer.message)
+        combinationLabel.text = analyzer.nameOfCombination.joined(separator: "\n")
+        pointsLabel.text = String(counter.currentPointsInRound)
+     
+       
       
     }
 }
