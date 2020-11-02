@@ -18,3 +18,4 @@ enum WinningCombination : String, CaseIterable {
     case fibonacci = "Fibonacci"
 }
 
+

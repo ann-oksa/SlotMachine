@@ -29,5 +29,159 @@ class SlotMachineTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+
+    func testCheckChangingRandomNumber() throws {
+        let randomizer = IntRandomizer()
+        var randomNumber = randomizer.getRandomNumber()
+        let a = randomNumber
+        randomNumber = randomizer.getRandomNumber()
+        let b = randomNumber
+        XCTAssertNotEqual(a, b, "They must be not equal")
+    }
+    
+    func testIsJackpotWhenDigitsAreEqual() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 1
+        triplet.two = 1
+        triplet.three = 1
+        let result = analyzer.isJackpot(triplet: triplet)
+        XCTAssertEqual(result, true, "The result must be true because digits must be equal")
+    }
+    
+    func testIsJackpotWhenDigitsAreNotEqual() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 1
+        triplet.two = 2
+        triplet.three = 3
+        let result = analyzer.isJackpot(triplet: triplet)
+        XCTAssertEqual(result, false, "The result must be false because digits are not equal")
+    }
+    
+    func testIsOddWhenDigitsAreOdd() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 3
+        triplet.two = 5
+        triplet.three = 7
+        let result = analyzer.isOdd(triplet: triplet)
+        XCTAssertEqual(result, true, "The result must be true because all digits must be odd")
+    }
+    
+    func testIsOddWhenDigitsAreNotOdd() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 3
+        triplet.two = 8
+        triplet.three = 7
+        let result = analyzer.isOdd(triplet: triplet)
+        XCTAssertEqual(result, false, "The result must be false because not all digits are odd")
+    }
+    
+    func testIsEvenWhenDigitsAreEven() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 2
+        triplet.two = 6
+        triplet.three = 6
+        let result = analyzer.isEven(triplet: triplet)
+        XCTAssertEqual(result, true, "The result must be true because all digits must be even")
+    }
+    
+    func testIsEvenWhenDigitsAreNotEven() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 2
+        triplet.two = 6
+        triplet.three = 7
+        let result = analyzer.isEven(triplet: triplet)
+        XCTAssertEqual(result, false, "The result must be false because not all digits are even")
+    }
+    
+    func testIsUpWhenDigitsGoUp() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 3
+        triplet.two = 4
+        triplet.three = 5
+        let result = analyzer.isUp(triplet: triplet)
+        XCTAssertEqual(result, true, "The result must be true because all digits go up")
+    }
+    
+    func testIsUpWhenNotAllDigitsGoUp() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 3
+        triplet.two = 5
+        triplet.three = 5
+        let result = analyzer.isUp(triplet: triplet)
+        XCTAssertEqual(result, false, "The result must be false because not all digits go up")
+    }
+    
+    func testIsDownWhenDigitsGoDown() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 6
+        triplet.two = 5
+        triplet.three = 3
+        let result = analyzer.isDown(triplet: triplet)
+        XCTAssertEqual(result, true, "The result must be true because all digits go down")
+    }
+    
+    func testIsDownWhenDigitsDontGoDown() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 7
+        triplet.two = 5
+        triplet.three = 7
+        let result = analyzer.isDown(triplet: triplet)
+        XCTAssertEqual(result, false, "The result must be false because not all digits go down")
+    }
+    
+    func testIsFibonacciWhenSumOfFirstAndSecondDigitsIsEqualToThird() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 3
+        triplet.two = 5
+        triplet.three = 8
+        let result = analyzer.isFibonacci(triplet: triplet)
+        XCTAssertEqual(result, true, "The result must be true because sum of first and second digits is equal to third digit")
+    }
+    
+    func testIsFibonacciWhenSumOfFirstAndSecondDigitsIsNotEqualToThird() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 3
+        triplet.two = 5
+        triplet.three = 7
+        let result = analyzer.isFibonacci(triplet: triplet)
+        XCTAssertEqual(result, false, "The result must be false because sum of first and second digits is not equal to third digit")
+    }
+    
+    func testGetWinningCombinationFromTripletWhenThereAreNotWinningCombination() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 5
+        triplet.two = 2
+        triplet.three = 8
+        let result = analyzer.getWinningCombinationFromTriplet(triplet: triplet)
+        XCTAssertEqual(result, ["Nothing"], "The result must be nothing because triplet is not winning")
+    }
+    
 
 }

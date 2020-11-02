@@ -12,51 +12,51 @@ class Analyzer {
     
     var nameOfCombination = [String]()
     
-    func isJackpot(triplet: Triplet) {
-        if triplet.one == triplet.two && triplet.one == triplet.three {
-            nameOfCombination.append(WinningCombination.jackpot.rawValue)
-        }
+    func isJackpot(triplet: Triplet) -> Bool {
+        return triplet.one == triplet.two && triplet.one == triplet.three
     }
     
-    func isOdd(triplet: Triplet) {
-        if triplet.one % 2 != 0 && triplet.two % 2 != 0 && triplet.three % 2 != 0 {
-            nameOfCombination.append(WinningCombination.odd.rawValue)
-        }
+    func isOdd(triplet: Triplet) -> Bool {
+        return triplet.one % 2 != 0 && triplet.two % 2 != 0 && triplet.three % 2 != 0
     }
     
-    func isEven(triplet: Triplet) {
-        if triplet.one % 2 == 0 && triplet.two % 2 == 0 && triplet.three % 2 == 0 {
-            nameOfCombination.append(WinningCombination.even.rawValue)
-        }
+    func isEven(triplet: Triplet) -> Bool {
+        return triplet.one % 2 == 0 && triplet.two % 2 == 0 && triplet.three % 2 == 0
     }
     
-    func isUp(triplet: Triplet) {
-        if triplet.one < triplet.two && triplet.two < triplet.three && triplet.one < triplet.three {
-            nameOfCombination.append(WinningCombination.up.rawValue)
-        }
+    func isUp(triplet: Triplet) -> Bool {
+        return triplet.one < triplet.two && triplet.two < triplet.three && triplet.one < triplet.three
     }
     
-    func isDown(triplet: Triplet) {
-        if triplet.one > triplet.two && triplet.two > triplet.three && triplet.one > triplet.three {
-            nameOfCombination.append(WinningCombination.down.rawValue)
-        }
+    func isDown(triplet: Triplet) -> Bool {
+        return triplet.one > triplet.two && triplet.two > triplet.three && triplet.one > triplet.three
     }
     
-    func isFibonacci(triplet: Triplet) {
-        if triplet.one + triplet.two == triplet.three {
-            nameOfCombination.append(WinningCombination.fibonacci.rawValue)
-        }
+    func isFibonacci(triplet: Triplet) -> Bool {
+        return triplet.one + triplet.two == triplet.three
     }
     
     func getWinningCombinationFromTriplet(triplet: Triplet) -> [String] {
         nameOfCombination = [String]()
         triplet.changeDigitsOfTriplet()
-        isJackpot(triplet: triplet)
-        isOdd(triplet: triplet)
-        isEven(triplet: triplet)
-        isUp(triplet: triplet)
-        isDown(triplet: triplet)
-        isFibonacci(triplet: triplet)
+        if isJackpot(triplet: triplet) {
+            nameOfCombination.append(WinningCombination.jackpot.rawValue)
+        }
+        if isOdd(triplet: triplet) {
+            nameOfCombination.append(WinningCombination.odd.rawValue)
+        }
+        if isEven(triplet: triplet) {
+            nameOfCombination.append(WinningCombination.even.rawValue)
+        }
+        if isUp(triplet: triplet) {
+            nameOfCombination.append(WinningCombination.up.rawValue)
+        }
+        if isDown(triplet: triplet) {
+            nameOfCombination.append(WinningCombination.down.rawValue)
+        }
+        if isFibonacci(triplet: triplet) {
+            nameOfCombination.append(WinningCombination.fibonacci.rawValue)
+        }
         if nameOfCombination.isEmpty {
             nameOfCombination.append(WinningCombination.nothing.rawValue)
         }
