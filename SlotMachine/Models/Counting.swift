@@ -16,6 +16,7 @@ class Counting {
         .even : 20,
         .odd : 20,
         .fibonacci : 50,
+        .prime : 30, 
         .nothing : 0 ]
     
     var currentPointsInRound = 0

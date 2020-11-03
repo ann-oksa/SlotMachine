@@ -36,6 +36,17 @@ class Analyzer {
         return triplet.one + triplet.two == triplet.three
     }
     
+    func isPrime(triplet: Triplet) -> Bool {
+        let sum = triplet.one + triplet.two + triplet.three
+        return sum > 1 && !(2..<sum).contains{sum % $0 == 0}
+    }
+    
+     func sosedi(triplet: Triplet) -> Bool {
+        // 545
+        let res = triplet.two > triplet.two + 1 || triplet.two < triplet.two - 1 && triplet.two > triplet.one + 1 || triplet.two < triplet.one - 1
+        return res
+    }
+    
     func getWinningCombinationFromTriplet(triplet: Triplet) -> [String] {
         nameOfCombination = [String]()
         triplet.changeDigitsOfTriplet()
@@ -56,6 +67,9 @@ class Analyzer {
         }
         if isFibonacci(triplet: triplet) {
             nameOfCombination.append(WinningCombination.fibonacci.rawValue)
+        }
+        if isPrime(triplet: triplet) {
+            nameOfCombination.append(WinningCombination.prime.rawValue)
         }
         if nameOfCombination.isEmpty {
             nameOfCombination.append(WinningCombination.nothing.rawValue)

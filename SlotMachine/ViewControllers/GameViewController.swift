@@ -19,6 +19,7 @@ class GameViewController: UIViewController {
     var analyzer = Analyzer()
     var counter = Counting()
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
