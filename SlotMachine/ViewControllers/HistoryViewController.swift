@@ -10,29 +10,34 @@ import UIKit
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-  
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
-
-        let nib = UINib.init(nibName: <#T##String#>, bundle: <#T##Bundle?#>)
-        self.tableView.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellReuseIdentifier: <#T##String#>)
+        
+        let nib = UINib.init(nibName: "CustomCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "CustomCell")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
-        cell.combinationLabel.text = "section \(indexPath.section)"
-        cell.nameOfComb.text = "row\(indexPath.row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        cell.nameOfCombinationLabel.text = "section \(indexPath.section)"
+        cell.pointsLabel.text = "row\(indexPath.row)"
+        
         return cell
     }
     
@@ -40,5 +45,10 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         return "section \(section)"
     }
     
-
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
+        view.tintColor = UIColor.black
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+    }
+    
 }
