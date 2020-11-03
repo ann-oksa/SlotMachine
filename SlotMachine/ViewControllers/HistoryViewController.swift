@@ -17,7 +17,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
 
-       
+        let nib = UINib.init(nibName: <#T##String#>, bundle: <#T##Bundle?#>)
+        self.tableView.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellReuseIdentifier: <#T##String#>)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
