@@ -205,15 +205,5 @@ class SlotMachineTests: XCTestCase {
         XCTAssertEqual(result, false, "The result must be false because sum of triplet is not prime number")
     }
 
-    func testIsSosedi() throws {
-        let randomizer = IntRandomizer()
-        let analyzer = Analyzer()
-        let triplet = Triplet(randomizer: randomizer)
-        triplet.one  = 2
-        triplet.two = 3
-        triplet.three = 4
-        let result = analyzer.isPrime(triplet: triplet)
-        XCTAssertEqual(result, true, "The result must be false because sum of triplet is not prime number")
-    }
 
 }

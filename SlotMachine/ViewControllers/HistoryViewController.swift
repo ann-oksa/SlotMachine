@@ -17,8 +17,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         
-        let nib = UINib.init(nibName: "CustomCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "CustomCell")
+        let nib = UINib.init(nibName: CustomCell.reuseIdentifier, bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: CustomCell.reuseIdentifier)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,7 +34,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.reuseIdentifier, for: indexPath) as! CustomCell
+        cell.combinationLabel.text = String(Game.shared.triplet.one)
         cell.nameOfCombinationLabel.text = "section \(indexPath.section)"
         cell.pointsLabel.text = "row\(indexPath.row)"
         

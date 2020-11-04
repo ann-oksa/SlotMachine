@@ -6,10 +6,11 @@
 //
 
 import Foundation
-
+// в истории хранятся раунды и каждый ход в раунде
 class History {
-    var rounds: [Round] = []
+    var rounds: [Triplet] = []
     func addRecord(triplet: Triplet) {
-        
+        rounds.append(triplet.)
+        print(rounds)
     }
 }

@@ -14,10 +14,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var goButton: UIButton!
     
-    let random = IntRandomizer()
-    var triplet = Triplet(randomizer: IntRandomizer())
-    var analyzer = Analyzer()
-    var counter = Counting()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +22,11 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func goButtonAction(_ sender: UIButton) {
-        
-        _ = analyzer.getWinningCombinationFromTriplet(triplet: triplet)
-        _ = counter.countPointsFromCombination(combinations: analyzer.nameOfCombination)
-        numberLabel.text = String(triplet.one) + String(triplet.two) + String(triplet.three)
-        combinationLabel.text = analyzer.nameOfCombination.joined(separator: "\n")
-        pointsLabel.text = String(counter.currentPointsInRound)
-        
+        Game.shared.nextTurn()
+        numberLabel.text = String(Game.shared.triplet.one) + String(Game.shared.triplet.two) + String(Game.shared.triplet.three)
+        combinationLabel.text = Game.shared.analyzer.nameOfCombination.joined(separator: "\n")
+        pointsLabel.text = String(Game.shared.counting.currentPointsInRound)
+
     }
 }
 

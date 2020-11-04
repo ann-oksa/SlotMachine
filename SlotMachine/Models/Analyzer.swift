@@ -41,15 +41,9 @@ class Analyzer {
         return sum > 1 && !(2..<sum).contains{sum % $0 == 0}
     }
     
-     func sosedi(triplet: Triplet) -> Bool {
-        // 545
-        let res = triplet.two > triplet.two + 1 || triplet.two < triplet.two - 1 && triplet.two > triplet.one + 1 || triplet.two < triplet.one - 1
-        return res
-    }
-    
     func getWinningCombinationFromTriplet(triplet: Triplet) -> [String] {
         nameOfCombination = [String]()
-        triplet.changeDigitsOfTriplet()
+        
         if isJackpot(triplet: triplet) {
             nameOfCombination.append(WinningCombination.jackpot.rawValue)
         }
