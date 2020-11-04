@@ -7,9 +7,13 @@
 
 import Foundation
 
-//class TurnOutcome {
-//    
-//    let triplet: Triplet
-//    let score: Int
-//    
-//}
+class TurnOutcome {
+    
+    let triplet: Triplet
+    let score: Int
+    
+    init(triplet: Triplet, score: Int) {
+        self.triplet = triplet
+        self.score = score
+    }
+}

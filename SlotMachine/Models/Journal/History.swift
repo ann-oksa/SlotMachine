@@ -7,6 +7,9 @@
 
 import Foundation
 
-//class History {
-//    let rounds: [Round]
-//}
+class History {
+    var rounds: [Round] = []
+    func addRecord(triplet: Triplet) {
+        
+    }
+}

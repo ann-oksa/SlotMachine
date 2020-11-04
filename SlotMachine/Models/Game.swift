@@ -9,6 +9,14 @@ import Foundation
 
 class Game {
     
+    static let shared =  Game()
+    
+    init () {
+        self.player =  Player()
+        self.analyzer = Analyzer()
+        self.counting = Counting()
+    }
+    
     enum GameState {
      case idle
      case playing
@@ -16,17 +24,49 @@ class Game {
     
     var player : Player
     var analyzer : Analyzer
-  //  var history : History
-    var state: GameState
-    var currentTurn: Int
-   // var slotMachine: SlotMachine
+    var counting : Counting
+    var state: GameState = .idle
+    var currentTurn: Int = 0
+    let maximumTurn: Int = 20
+    let minimalGameCost : Int = 25
+    let history = History()
+    let randomizer = IntRandomizer()
+    var triplet = Triplet(randomizer: IntRandomizer())
     
-    init(player: Player, analyzer: Analyzer,/* history: History, */ state: GameState, currentTurn: Int) {
+    init(player: Player, analyzer: Analyzer, counting: Counting) {
         self.player = player
         self.analyzer = analyzer
-     //   self.history = history
-        self.state = state
-        self.currentTurn = currentTurn
+        self.counting = counting
+    }
+    
+    func startGame() -> Bool {
+        guard state == .idle else {
+            print("The  game is already on")
+            return false
+        }
+        guard player.balance >= minimalGameCost else {
+            print("Not enough coins for paying")
+            return false
+        }
+        player.balance -= minimalGameCost
+        state = .playing
+        currentTurn = 0
+        return true
+    }
+    
+    func finishGame() {}
+    
+    func nextTurn()  -> Bool {
+        guard currentTurn < maximumTurn else {
+            print("Round is over")
+            return false
+        }
+        analyzer.getWinningCombinationFromTriplet(triplet: triplet)
+        counting.countPointsFromCombination(combinations: analyzer.nameOfCombination)
+        player.balance += counting.currentPointsInRound
+        currentTurn += 1
+        history.addRecord(triplet: triplet)
+        return true
     }
     
 }
