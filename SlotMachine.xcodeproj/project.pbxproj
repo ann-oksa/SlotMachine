@@ -11,7 +11,7 @@
 		CA11117725506A7D002B8B41 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11117625506A7D002B8B41 /* CustomCell.swift */; };
 		CA11117F25506A8D002B8B41 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA11117E25506A8D002B8B41 /* CustomCell.xib */; };
 		CA1111902551BCF3002B8B41 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11118F2551BCF3002B8B41 /* Game.swift */; };
-		CA1111982551C16D002B8B41 /* TurnOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1111972551C16D002B8B41 /* TurnOutcome.swift */; };
+		CA1111982551C16D002B8B41 /* JournalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1111972551C16D002B8B41 /* JournalRecord.swift */; };
 		CA11119E2551C1C6002B8B41 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11119D2551C1C6002B8B41 /* Round.swift */; };
 		CA1111A62552AE12002B8B41 /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1111A52552AE12002B8B41 /* Machine.swift */; };
 		CA1111AE2552B1D9002B8B41 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1111AD2552B1D9002B8B41 /* ReusableView.swift */; };
@@ -55,7 +55,7 @@
 		CA11117625506A7D002B8B41 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		CA11117E25506A8D002B8B41 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		CA11118F2551BCF3002B8B41 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		CA1111972551C16D002B8B41 /* TurnOutcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnOutcome.swift; sourceTree = "<group>"; };
+		CA1111972551C16D002B8B41 /* JournalRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalRecord.swift; sourceTree = "<group>"; };
 		CA11119D2551C1C6002B8B41 /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 		CA1111A52552AE12002B8B41 /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
 		CA1111AD2552B1D9002B8B41 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 			children = (
 				CA111147254C2D43002B8B41 /* History.swift */,
 				CA11119D2551C1C6002B8B41 /* Round.swift */,
-				CA1111972551C16D002B8B41 /* TurnOutcome.swift */,
+				CA1111972551C16D002B8B41 /* JournalRecord.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -347,7 +347,7 @@
 				CA6353AB25406B00008684BF /* Player.swift in Sources */,
 				CA6353B025406B45008684BF /* Randomizer.swift in Sources */,
 				CA11117725506A7D002B8B41 /* CustomCell.swift in Sources */,
-				CA1111982551C16D002B8B41 /* TurnOutcome.swift in Sources */,
+				CA1111982551C16D002B8B41 /* JournalRecord.swift in Sources */,
 				CA1111AE2552B1D9002B8B41 /* ReusableView.swift in Sources */,
 				CA6353E22546C6A0008684BF /* Triplet.swift in Sources */,
 				CA6353BD2542B5E1008684BF /* ProfileViewController.swift in Sources */,

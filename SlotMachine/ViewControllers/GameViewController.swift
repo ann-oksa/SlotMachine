@@ -23,7 +23,7 @@ class GameViewController: UIViewController {
     
     @IBAction func goButtonAction(_ sender: UIButton) {
         Game.shared.nextTurn()
-        numberLabel.text = String(Game.shared.triplet.one) + String(Game.shared.triplet.two) + String(Game.shared.triplet.three)
+        numberLabel.text = Game.shared.triplet.convertTripletIntoString()
         combinationLabel.text = Game.shared.analyzer.nameOfCombination.joined(separator: "\n")
         pointsLabel.text = String(Game.shared.counting.currentPointsInRound)
 

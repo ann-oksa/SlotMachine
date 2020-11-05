@@ -29,6 +29,7 @@ class Game {
     var currentTurn: Int = 0
     let maximumTurn: Int = 20
     let minimalGameCost : Int = 25
+    var balance: Int = 0
     let history = History()
     let randomizer = IntRandomizer()
     var triplet = Triplet(randomizer: IntRandomizer())
@@ -65,10 +66,12 @@ class Game {
         var newTriplet = Triplet(randomizer: IntRandomizer())
         newTriplet.changeDigitsOfTriplet()
         analyzer.getWinningCombinationFromTriplet(triplet: newTriplet)
-        counting.countPointsFromCombination(combinations: analyzer.nameOfCombination)
+        let coun = counting.countPointsFromCombination(combinations: analyzer.nameOfCombination)
         player.balance += counting.currentPointsInRound
+        balance += coun
+        print(balance)
         currentTurn += 1
-        history.addRecord(triplet: newTriplet)
+        history.addRecord(triplet: newTriplet, name: analyzer.nameOfCombination.joined(separator: "\n"), point: counting.currentPointsInRound )
         self.triplet = newTriplet
         return true
     }

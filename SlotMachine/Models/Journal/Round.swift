@@ -6,8 +6,8 @@
 //
 
 import Foundation
-
-class Round {
-   var number: Int = 0
-   var turns: [TurnOutcome] = []
-}
+//
+//class Round {
+//   var number: Int = 0
+//   var turns: [TurnOutcome] = []
+//}
