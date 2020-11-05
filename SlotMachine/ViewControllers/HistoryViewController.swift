@@ -42,16 +42,16 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.reuseIdentifier, for: indexPath) as! CustomCell
-        var triplet  = Game.shared.history.triplets[indexPath.row]
+        let triplet  = Game.shared.history.triplets[indexPath.row]
         cell.combinationLabel.text = triplet.convertTripletIntoString()
-        cell.nameOfCombinationLabel.text = Game.shared.history.names[indexPath.row]
-        cell.pointsLabel.text = String(Game.shared.history.sum[indexPath.row])
+        cell.nameOfCombinationLabel.text = Game.shared.history.description[indexPath.row]
+        cell.pointsLabel.text = String(Game.shared.history.points[indexPath.row])
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "section \(section)"
+        return "section \(section) points \(Game.shared.balanceInRound)"
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){

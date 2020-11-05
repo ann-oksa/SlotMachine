@@ -18,8 +18,8 @@ class Game {
     }
     
     enum GameState {
-     case idle
-     case playing
+        case idle
+        case playing
     }
     
     var player : Player
@@ -29,7 +29,7 @@ class Game {
     var currentTurn: Int = 0
     let maximumTurn: Int = 20
     let minimalGameCost : Int = 25
-    var balance: Int = 0
+    var balanceInRound: Int = 0
     let history = History()
     let randomizer = IntRandomizer()
     var triplet = Triplet(randomizer: IntRandomizer())
@@ -55,7 +55,7 @@ class Game {
         return true
     }
     
-    func finishGame() {}
+    
     
     func nextTurn() -> Bool {
         
@@ -63,16 +63,21 @@ class Game {
             print("Round is over")
             return false
         }
-        var newTriplet = Triplet(randomizer: IntRandomizer())
+        
+        let newTriplet = Triplet(randomizer: IntRandomizer())
         newTriplet.changeDigitsOfTriplet()
-        analyzer.getWinningCombinationFromTriplet(triplet: newTriplet)
-        let coun = counting.countPointsFromCombination(combinations: analyzer.nameOfCombination)
-        player.balance += counting.currentPointsInRound
-        balance += coun
-        print(balance)
+        _ = analyzer.getWinningCombinationFromTriplet(triplet: newTriplet)
+        _ = counting.countPointsFromCombination(combinations: analyzer.nameOfCombination)
+        //        player.balance += counting.currentPointsInRound
+        balanceInRound += counting.countPointsFromCombination(combinations: analyzer.nameOfCombination)
         currentTurn += 1
-        history.addRecord(triplet: newTriplet, name: analyzer.nameOfCombination.joined(separator: "\n"), point: counting.currentPointsInRound )
+        history.addRecord(triplet: newTriplet, combination: analyzer.nameOfCombination.joined(separator: "\n"), pointsForTurn: counting.countPointsFromCombination(combinations: analyzer.nameOfCombination) )
         self.triplet = newTriplet
+        return true
+    }
+    
+    func finishGame() -> Bool {
+        
         return true
     }
     

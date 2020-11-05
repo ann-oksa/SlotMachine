@@ -19,21 +19,18 @@ class Counting {
         .prime : 30, 
         .nothing : 0 ]
     
-    var currentPointsInRound = 0
-    
-
     
     func countPointsFromCombination(combinations: [String]) -> Int {
-        var currentPointsForTurn = 0
+        var currentPointsInTurn = 0
         for element in combinations {
             for key in pointsForCombination.keys {
                 if element == key.rawValue {
-                    currentPointsForTurn = pointsForCombination[key]!
+                    currentPointsInTurn += pointsForCombination[key]!
                 }
             }
         }
         
-        return currentPointsForTurn
+        return currentPointsInTurn
     }
     
 }

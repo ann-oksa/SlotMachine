@@ -25,7 +25,7 @@ class GameViewController: UIViewController {
         Game.shared.nextTurn()
         numberLabel.text = Game.shared.triplet.convertTripletIntoString()
         combinationLabel.text = Game.shared.analyzer.nameOfCombination.joined(separator: "\n")
-        pointsLabel.text = String(Game.shared.counting.currentPointsInRound)
+        pointsLabel.text = String(Game.shared.balanceInRound)
 
     }
 }
