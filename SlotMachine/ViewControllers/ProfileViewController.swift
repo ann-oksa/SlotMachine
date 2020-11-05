@@ -12,6 +12,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var balanceLabel: UILabel!
     
     var player = Player()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 

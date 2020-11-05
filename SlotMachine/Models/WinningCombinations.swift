@@ -16,6 +16,7 @@ enum WinningCombination : String, CaseIterable {
     case even = "Even"
     case odd = "Odd"
     case fibonacci = "Fibonacci"
+    case prime = "Prime"
 }
 
 

@@ -16,20 +16,21 @@ class Counting {
         .even : 20,
         .odd : 20,
         .fibonacci : 50,
+        .prime : 30, 
         .nothing : 0 ]
     
-    var currentPointsInRound = 0
     
     func countPointsFromCombination(combinations: [String]) -> Int {
+        var currentPointsInTurn = 0
         for element in combinations {
             for key in pointsForCombination.keys {
-                if  element == key.rawValue {
-                    currentPointsInRound += pointsForCombination[key]!
+                if element == key.rawValue {
+                    currentPointsInTurn += pointsForCombination[key]!
                 }
             }
         }
         
-        return currentPointsInRound
+        return currentPointsInTurn
     }
     
 }

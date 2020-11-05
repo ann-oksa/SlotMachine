@@ -176,12 +176,34 @@ class SlotMachineTests: XCTestCase {
         let randomizer = IntRandomizer()
         let analyzer = Analyzer()
         let triplet = Triplet(randomizer: randomizer)
-        triplet.one  = 5
-        triplet.two = 2
-        triplet.three = 8
+        triplet.one  = 0
+        triplet.two = 1
+        triplet.three = 0
         let result = analyzer.getWinningCombinationFromTriplet(triplet: triplet)
         XCTAssertEqual(result, ["Nothing"], "The result must be nothing because triplet is not winning")
     }
     
+    func testIsPrimeWhenSumOfTripletIsPrimeNumber() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 1
+        triplet.two = 3
+        triplet.three = 3
+        let result = analyzer.isPrime(triplet: triplet)
+        XCTAssertEqual(result, true, "The result must be true because sum of triplet is prime number")
+    }
+    
+    func testIsPrimeWhenSumOfTripletIsNotPrimeNumber() throws {
+        let randomizer = IntRandomizer()
+        let analyzer = Analyzer()
+        let triplet = Triplet(randomizer: randomizer)
+        triplet.one  = 1
+        triplet.two = 3
+        triplet.three = 4
+        let result = analyzer.isPrime(triplet: triplet)
+        XCTAssertEqual(result, false, "The result must be false because sum of triplet is not prime number")
+    }
+
 
 }

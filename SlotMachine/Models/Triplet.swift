@@ -25,5 +25,9 @@ class Triplet {
         self.three = randomizer.getRandomNumber()
     }
     
+    func convertTripletIntoString() -> String {
+        return String(self.one) + String(self.two) + String(self.three)
+    }
+    
 }
 

@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CA111148254C2D43002B8B41 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA111147254C2D43002B8B41 /* History.swift */; };
-		CA11116A25505E3B002B8B41 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11116925505E3B002B8B41 /* NewTableViewCell.swift */; };
-		CA11116F25505E66002B8B41 /* NewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA11116E25505E66002B8B41 /* NewTableViewCell.xib */; };
 		CA11117725506A7D002B8B41 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11117625506A7D002B8B41 /* CustomCell.swift */; };
 		CA11117F25506A8D002B8B41 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA11117E25506A8D002B8B41 /* CustomCell.xib */; };
+		CA1111902551BCF3002B8B41 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11118F2551BCF3002B8B41 /* Game.swift */; };
+		CA1111AE2552B1D9002B8B41 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1111AD2552B1D9002B8B41 /* ReusableView.swift */; };
 		CA63537325405F14008684BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63537225405F14008684BF /* AppDelegate.swift */; };
 		CA63537525405F14008684BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63537425405F14008684BF /* SceneDelegate.swift */; };
 		CA63537A25405F14008684BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA63537825405F14008684BF /* Main.storyboard */; };
@@ -28,7 +28,6 @@
 		CA6353D52546B5B2008684BF /* Analyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353D42546B5B1008684BF /* Analyzer.swift */; };
 		CA6353DA2546B6F5008684BF /* WinningCombinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353D92546B6F5008684BF /* WinningCombinations.swift */; };
 		CA6353E22546C6A0008684BF /* Triplet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353E12546C6A0008684BF /* Triplet.swift */; };
-		CA6353F0254ACDEC008684BF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353EF254ACDEB008684BF /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +49,10 @@
 
 /* Begin PBXFileReference section */
 		CA111147254C2D43002B8B41 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
-		CA11116925505E3B002B8B41 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
-		CA11116E25505E66002B8B41 /* NewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTableViewCell.xib; sourceTree = "<group>"; };
 		CA11117625506A7D002B8B41 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		CA11117E25506A8D002B8B41 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		CA11118F2551BCF3002B8B41 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		CA1111AD2552B1D9002B8B41 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		CA63536F25405F14008684BF /* SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA63537225405F14008684BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA63537425405F14008684BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +75,6 @@
 		CA6353D42546B5B1008684BF /* Analyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analyzer.swift; sourceTree = "<group>"; };
 		CA6353D92546B6F5008684BF /* WinningCombinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningCombinations.swift; sourceTree = "<group>"; };
 		CA6353E12546C6A0008684BF /* Triplet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triplet.swift; sourceTree = "<group>"; };
-		CA6353EF254ACDEB008684BF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +105,9 @@
 		CA11116025504B98002B8B41 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				CA6353EF254ACDEB008684BF /* CustomTableViewCell.swift */,
-				CA11116925505E3B002B8B41 /* NewTableViewCell.swift */,
-				CA11116E25505E66002B8B41 /* NewTableViewCell.xib */,
 				CA11117625506A7D002B8B41 /* CustomCell.swift */,
 				CA11117E25506A8D002B8B41 /* CustomCell.xib */,
+				CA1111AD2552B1D9002B8B41 /* ReusableView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -183,6 +179,7 @@
 		CA6353C52542B649008684BF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CA11118F2551BCF3002B8B41 /* Game.swift */,
 				CA6353AA25406B00008684BF /* Player.swift */,
 				CA6353AF25406B45008684BF /* Randomizer.swift */,
 				CA6353E12546C6A0008684BF /* Triplet.swift */,
@@ -300,7 +297,6 @@
 				CA11117F25506A8D002B8B41 /* CustomCell.xib in Resources */,
 				CA63537F25405F19008684BF /* LaunchScreen.storyboard in Resources */,
 				CA63537C25405F19008684BF /* Assets.xcassets in Resources */,
-				CA11116F25505E66002B8B41 /* NewTableViewCell.xib in Resources */,
 				CA63537A25405F14008684BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,13 +326,13 @@
 				CA6353D52546B5B2008684BF /* Analyzer.swift in Sources */,
 				CA6353B825406E3F008684BF /* Counting.swift in Sources */,
 				CA63537325405F14008684BF /* AppDelegate.swift in Sources */,
-				CA11116A25505E3B002B8B41 /* NewTableViewCell.swift in Sources */,
 				CA6353AB25406B00008684BF /* Player.swift in Sources */,
 				CA6353B025406B45008684BF /* Randomizer.swift in Sources */,
 				CA11117725506A7D002B8B41 /* CustomCell.swift in Sources */,
-				CA6353F0254ACDEC008684BF /* CustomTableViewCell.swift in Sources */,
+				CA1111AE2552B1D9002B8B41 /* ReusableView.swift in Sources */,
 				CA6353E22546C6A0008684BF /* Triplet.swift in Sources */,
 				CA6353BD2542B5E1008684BF /* ProfileViewController.swift in Sources */,
+				CA1111902551BCF3002B8B41 /* Game.swift in Sources */,
 				CA63537525405F14008684BF /* SceneDelegate.swift in Sources */,
 				CA111148254C2D43002B8B41 /* History.swift in Sources */,
 				CA6353D02542F92F008684BF /* HistoryViewController.swift in Sources */,

@@ -9,6 +9,9 @@ import UIKit
 
 class CustomCell: UITableViewCell {
 
+    @IBOutlet weak var combinationLabel: UILabel!
+    @IBOutlet weak var nameOfCombinationLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
