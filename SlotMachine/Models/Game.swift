@@ -57,17 +57,19 @@ class Game {
     func finishGame() {}
     
     func nextTurn() -> Bool {
+        
         guard currentTurn < maximumTurn else {
             print("Round is over")
             return false
         }
-        triplet.changeDigitsOfTriplet()
-        analyzer.getWinningCombinationFromTriplet(triplet: triplet)
+        var newTriplet = Triplet(randomizer: IntRandomizer())
+        newTriplet.changeDigitsOfTriplet()
+        analyzer.getWinningCombinationFromTriplet(triplet: newTriplet)
         counting.countPointsFromCombination(combinations: analyzer.nameOfCombination)
         player.balance += counting.currentPointsInRound
         currentTurn += 1
-        history.addRecord(triplet: triplet)
-        
+        history.addRecord(triplet: newTriplet)
+        self.triplet = newTriplet
         return true
     }
     

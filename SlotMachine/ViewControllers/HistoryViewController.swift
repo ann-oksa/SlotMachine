@@ -19,14 +19,21 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let nib = UINib.init(nibName: CustomCell.reuseIdentifier, bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: CustomCell.reuseIdentifier)
+       
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+        print("view will appear")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return Game.shared.history.rounds.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -35,7 +42,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.reuseIdentifier, for: indexPath) as! CustomCell
-        cell.combinationLabel.text = String(Game.shared.triplet.one)
+        var triplet  = Game.shared.history.rounds[indexPath.row]
+        cell.combinationLabel.text = String(triplet.one) + String(triplet.two) + String(triplet.three)
         cell.nameOfCombinationLabel.text = "section \(indexPath.section)"
         cell.pointsLabel.text = "row\(indexPath.row)"
         

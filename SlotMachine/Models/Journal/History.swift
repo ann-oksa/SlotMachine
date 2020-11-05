@@ -10,7 +10,7 @@ import Foundation
 class History {
     var rounds: [Triplet] = []
     func addRecord(triplet: Triplet) {
-        rounds.append(triplet.)
+        rounds.append(triplet)
         print(rounds)
     }
 }
