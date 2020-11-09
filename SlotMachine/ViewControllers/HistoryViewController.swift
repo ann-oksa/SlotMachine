@@ -17,8 +17,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         
-        let nib = UINib.init(nibName: CustomCell.reuseIdentifier, bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: CustomCell.reuseIdentifier)
+        let nib = UINib.init(nibName: HistoryCell.reuseIdentifier, bundle: Bundle(for: HistoryViewController.self))
+        self.tableView.register(nib, forCellReuseIdentifier: HistoryCell.reuseIdentifier)
        
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -41,9 +41,10 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.reuseIdentifier, for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: HistoryCell.reuseIdentifier, for: indexPath) as! HistoryCell
         let triplet  = Game.shared.history.triplets[indexPath.row]
-        cell.combinationLabel.text = triplet.convertTripletIntoString()
+       cell.combinationLabel.text = triplet.convertTripletIntoString()
+//        cell.bind(t: triplet)
         cell.nameOfCombinationLabel.text = Game.shared.history.description[indexPath.row]
         cell.pointsLabel.text = String(Game.shared.history.points[indexPath.row])
         

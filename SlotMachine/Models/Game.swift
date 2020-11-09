@@ -66,10 +66,10 @@ class Game {
         
         let newTriplet = Triplet(randomizer: IntRandomizer())
         newTriplet.changeDigitsOfTriplet()
-        _ = analyzer.getWinningCombinationFromTriplet(triplet: newTriplet)
-        _ = counting.countPointsFromCombination(combinations: analyzer.nameOfCombination)
+        let getWinningCombination = analyzer.getWinningCombinationFromTriplet(triplet: newTriplet)
+        let countPointsFromCombination = counting.countPointsFromCombination(combinations: getWinningCombination)
         //        player.balance += counting.currentPointsInRound
-        balanceInRound += counting.countPointsFromCombination(combinations: analyzer.nameOfCombination)
+        balanceInRound += countPointsFromCombination
         currentTurn += 1
         history.addRecord(triplet: newTriplet, combination: analyzer.nameOfCombination.joined(separator: "\n"), pointsForTurn: counting.countPointsFromCombination(combinations: analyzer.nameOfCombination) )
         self.triplet = newTriplet

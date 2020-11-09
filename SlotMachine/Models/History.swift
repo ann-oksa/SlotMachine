@@ -23,4 +23,6 @@ class History {
 
 
 
-
+struct DataForCell {
+    
+}
