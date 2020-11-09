@@ -45,8 +45,8 @@
                                     <action selector="goButtonAction:" destination="4fE-BK-Vix" eventType="touchUpInside" id="NUv-Gh-RMs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Combination:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydi-kC-wVP">
-                                <rect key="frame" x="105" y="554" width="204" height="85"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Combination:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydi-kC-wVP">
+                                <rect key="frame" x="105" y="554" width="204" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -61,24 +61,24 @@
                         <viewLayoutGuide key="safeArea" id="2bX-1w-N2m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2bX-1w-N2m" firstAttribute="trailing" secondItem="g10-Ka-o2Y" secondAttribute="trailing" constant="105" id="2aQ-rX-Tfv"/>
-                            <constraint firstItem="ydi-kC-wVP" firstAttribute="leading" secondItem="2bX-1w-N2m" secondAttribute="leading" constant="105" id="3Y0-Uo-srZ"/>
-                            <constraint firstItem="ydi-kC-wVP" firstAttribute="top" secondItem="WYA-yJ-zdi" secondAttribute="bottom" constant="101" id="5BU-OP-6Ok"/>
+                            <constraint firstItem="2bX-1w-N2m" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="g10-Ka-o2Y" secondAttribute="trailing" constant="105" id="2aQ-rX-Tfv"/>
+                            <constraint firstItem="ydi-kC-wVP" firstAttribute="leading" relation="lessThanOrEqual" secondItem="2bX-1w-N2m" secondAttribute="leading" constant="105" id="3Y0-Uo-srZ"/>
                             <constraint firstItem="2bX-1w-N2m" firstAttribute="trailing" secondItem="Bhm-Nx-gKV" secondAttribute="trailing" constant="105" id="7oD-Q2-Sec"/>
                             <constraint firstItem="jY7-jV-ad0" firstAttribute="top" secondItem="Yd0-We-ii0" secondAttribute="bottom" constant="107" id="AHL-VU-E7E"/>
-                            <constraint firstItem="WYA-yJ-zdi" firstAttribute="leading" secondItem="2bX-1w-N2m" secondAttribute="leading" constant="129" id="DS4-bF-u0z"/>
-                            <constraint firstItem="Bhm-Nx-gKV" firstAttribute="top" secondItem="ydi-kC-wVP" secondAttribute="bottom" constant="93" id="GyH-Ms-9Mf"/>
-                            <constraint firstItem="2bX-1w-N2m" firstAttribute="trailing" secondItem="WYA-yJ-zdi" secondAttribute="trailing" constant="128" id="IWH-Xt-e0g"/>
-                            <constraint firstItem="2bX-1w-N2m" firstAttribute="trailing" secondItem="Yd0-We-ii0" secondAttribute="trailing" constant="105" id="PqV-HK-uoW"/>
-                            <constraint firstItem="jY7-jV-ad0" firstAttribute="leading" secondItem="2bX-1w-N2m" secondAttribute="leading" constant="105" id="W3u-9N-Lg8"/>
-                            <constraint firstItem="WYA-yJ-zdi" firstAttribute="top" secondItem="jY7-jV-ad0" secondAttribute="bottom" constant="77" id="fmm-Wv-oeo"/>
+                            <constraint firstItem="WYA-yJ-zdi" firstAttribute="leading" relation="lessThanOrEqual" secondItem="2bX-1w-N2m" secondAttribute="leading" constant="129" id="DS4-bF-u0z"/>
+                            <constraint firstItem="ydi-kC-wVP" firstAttribute="top" secondItem="WYA-yJ-zdi" secondAttribute="bottom" constant="101" id="DfG-Ud-edl"/>
+                            <constraint firstItem="2bX-1w-N2m" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="WYA-yJ-zdi" secondAttribute="trailing" constant="128" id="IWH-Xt-e0g"/>
+                            <constraint firstItem="WYA-yJ-zdi" firstAttribute="top" secondItem="jY7-jV-ad0" secondAttribute="bottom" constant="77" id="Jyo-zi-cI8"/>
+                            <constraint firstItem="2bX-1w-N2m" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Yd0-We-ii0" secondAttribute="trailing" constant="105" id="PqV-HK-uoW"/>
+                            <constraint firstItem="jY7-jV-ad0" firstAttribute="leading" relation="lessThanOrEqual" secondItem="2bX-1w-N2m" secondAttribute="leading" constant="105" id="W3u-9N-Lg8"/>
+                            <constraint firstItem="Bhm-Nx-gKV" firstAttribute="top" secondItem="ydi-kC-wVP" secondAttribute="bottom" constant="93" id="Z3e-aW-AIe"/>
                             <constraint firstItem="Yd0-We-ii0" firstAttribute="top" secondItem="g10-Ka-o2Y" secondAttribute="bottom" constant="47" id="j4S-Hd-xUH"/>
                             <constraint firstItem="g10-Ka-o2Y" firstAttribute="top" secondItem="2bX-1w-N2m" secondAttribute="top" constant="48" id="kHM-nh-84t"/>
                             <constraint firstItem="Bhm-Nx-gKV" firstAttribute="leading" secondItem="2bX-1w-N2m" secondAttribute="leading" constant="105" id="lzJ-2L-e4x"/>
-                            <constraint firstItem="2bX-1w-N2m" firstAttribute="trailing" secondItem="ydi-kC-wVP" secondAttribute="trailing" constant="105" id="mZR-YJ-gOd"/>
-                            <constraint firstItem="Yd0-We-ii0" firstAttribute="leading" secondItem="2bX-1w-N2m" secondAttribute="leading" constant="105" id="p8B-uu-QPG"/>
-                            <constraint firstItem="g10-Ka-o2Y" firstAttribute="leading" secondItem="2bX-1w-N2m" secondAttribute="leading" constant="105" id="tOo-Vl-J1S"/>
-                            <constraint firstItem="2bX-1w-N2m" firstAttribute="trailing" secondItem="jY7-jV-ad0" secondAttribute="trailing" constant="105" id="xWD-9H-zuj"/>
+                            <constraint firstItem="2bX-1w-N2m" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ydi-kC-wVP" secondAttribute="trailing" constant="105" id="mZR-YJ-gOd"/>
+                            <constraint firstItem="Yd0-We-ii0" firstAttribute="leading" relation="lessThanOrEqual" secondItem="2bX-1w-N2m" secondAttribute="leading" constant="105" id="p8B-uu-QPG"/>
+                            <constraint firstItem="g10-Ka-o2Y" firstAttribute="leading" relation="lessThanOrEqual" secondItem="2bX-1w-N2m" secondAttribute="leading" constant="105" id="tOo-Vl-J1S"/>
+                            <constraint firstItem="2bX-1w-N2m" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="jY7-jV-ad0" secondAttribute="trailing" constant="105" id="xWD-9H-zuj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="gamecontroller.fill" catalog="system" id="JSI-1f-EP3"/>
@@ -107,8 +107,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTb-r4-j1H">
-                                <rect key="frame" x="139" y="414" width="136" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTb-r4-j1H">
+                                <rect key="frame" x="139" y="414" width="136" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -117,12 +117,14 @@
                         <viewLayoutGuide key="safeArea" id="60j-om-Rwe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="60j-om-Rwe" firstAttribute="trailing" secondItem="mQa-f6-0XS" secondAttribute="trailing" constant="139" id="2Dt-yV-Q9N"/>
-                            <constraint firstItem="60j-om-Rwe" firstAttribute="trailing" secondItem="hTb-r4-j1H" secondAttribute="trailing" constant="139" id="AyW-ho-ZfR"/>
-                            <constraint firstItem="hTb-r4-j1H" firstAttribute="top" secondItem="mQa-f6-0XS" secondAttribute="bottom" constant="210.5" id="It8-3y-k0O"/>
-                            <constraint firstItem="mQa-f6-0XS" firstAttribute="leading" secondItem="60j-om-Rwe" secondAttribute="leading" constant="139" id="ihQ-lK-qo5"/>
-                            <constraint firstItem="hTb-r4-j1H" firstAttribute="leading" secondItem="60j-om-Rwe" secondAttribute="leading" constant="139" id="jPi-v9-hGe"/>
+                            <constraint firstItem="60j-om-Rwe" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="mQa-f6-0XS" secondAttribute="trailing" constant="139" id="2Dt-yV-Q9N"/>
+                            <constraint firstItem="mQa-f6-0XS" firstAttribute="centerX" secondItem="60j-om-Rwe" secondAttribute="centerX" id="9ZS-fm-4y5"/>
+                            <constraint firstItem="60j-om-Rwe" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hTb-r4-j1H" secondAttribute="trailing" constant="139" id="AyW-ho-ZfR"/>
+                            <constraint firstItem="hTb-r4-j1H" firstAttribute="centerX" secondItem="mQa-f6-0XS" secondAttribute="centerX" id="JRT-3M-dG6"/>
+                            <constraint firstItem="mQa-f6-0XS" firstAttribute="leading" relation="lessThanOrEqual" secondItem="60j-om-Rwe" secondAttribute="leading" constant="139" id="ihQ-lK-qo5"/>
+                            <constraint firstItem="hTb-r4-j1H" firstAttribute="leading" relation="lessThanOrEqual" secondItem="60j-om-Rwe" secondAttribute="leading" constant="139" id="jPi-v9-hGe"/>
                             <constraint firstItem="mQa-f6-0XS" firstAttribute="top" secondItem="60j-om-Rwe" secondAttribute="top" constant="139" id="oVh-py-yZ5"/>
+                            <constraint firstItem="hTb-r4-j1H" firstAttribute="top" secondItem="mQa-f6-0XS" secondAttribute="bottom" constant="210.5" id="wTb-JA-NQV"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="nOW-KD-bMk">

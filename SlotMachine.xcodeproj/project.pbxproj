@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CA111148254C2D43002B8B41 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA111147254C2D43002B8B41 /* History.swift */; };
-		CA11117725506A7D002B8B41 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11117625506A7D002B8B41 /* CustomCell.swift */; };
-		CA11117F25506A8D002B8B41 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA11117E25506A8D002B8B41 /* CustomCell.xib */; };
+		CA11117725506A7D002B8B41 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11117625506A7D002B8B41 /* HistoryCell.swift */; };
+		CA11117F25506A8D002B8B41 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA11117E25506A8D002B8B41 /* HistoryCell.xib */; };
 		CA1111902551BCF3002B8B41 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11118F2551BCF3002B8B41 /* Game.swift */; };
 		CA1111AE2552B1D9002B8B41 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1111AD2552B1D9002B8B41 /* ReusableView.swift */; };
 		CA63537325405F14008684BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63537225405F14008684BF /* AppDelegate.swift */; };
@@ -49,8 +49,8 @@
 
 /* Begin PBXFileReference section */
 		CA111147254C2D43002B8B41 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
-		CA11117625506A7D002B8B41 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		CA11117E25506A8D002B8B41 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		CA11117625506A7D002B8B41 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		CA11117E25506A8D002B8B41 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		CA11118F2551BCF3002B8B41 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CA1111AD2552B1D9002B8B41 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		CA63536F25405F14008684BF /* SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,8 +105,8 @@
 		CA11116025504B98002B8B41 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				CA11117625506A7D002B8B41 /* CustomCell.swift */,
-				CA11117E25506A8D002B8B41 /* CustomCell.xib */,
+				CA11117625506A7D002B8B41 /* HistoryCell.swift */,
+				CA11117E25506A8D002B8B41 /* HistoryCell.xib */,
 				CA1111AD2552B1D9002B8B41 /* ReusableView.swift */,
 			);
 			path = Cells;
@@ -294,7 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA11117F25506A8D002B8B41 /* CustomCell.xib in Resources */,
+				CA11117F25506A8D002B8B41 /* HistoryCell.xib in Resources */,
 				CA63537F25405F19008684BF /* LaunchScreen.storyboard in Resources */,
 				CA63537C25405F19008684BF /* Assets.xcassets in Resources */,
 				CA63537A25405F14008684BF /* Main.storyboard in Resources */,
@@ -328,7 +328,7 @@
 				CA63537325405F14008684BF /* AppDelegate.swift in Sources */,
 				CA6353AB25406B00008684BF /* Player.swift in Sources */,
 				CA6353B025406B45008684BF /* Randomizer.swift in Sources */,
-				CA11117725506A7D002B8B41 /* CustomCell.swift in Sources */,
+				CA11117725506A7D002B8B41 /* HistoryCell.swift in Sources */,
 				CA1111AE2552B1D9002B8B41 /* ReusableView.swift in Sources */,
 				CA6353E22546C6A0008684BF /* Triplet.swift in Sources */,
 				CA6353BD2542B5E1008684BF /* ProfileViewController.swift in Sources */,
