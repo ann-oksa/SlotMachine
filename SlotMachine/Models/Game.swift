@@ -8,8 +8,7 @@
 import Foundation
 
 protocol GameDelegate : class {
-    func startGame()
-    func nextTurn()
+    func didFinishTurn(triplet: Triplet, combination: String, points: Int)
 }
 
 
@@ -30,13 +29,13 @@ class Game {
     
     weak var delegate : GameDelegate?
     var player : Player
-    var analyzer : Analyzer
-    var counting : Counting
+   private var analyzer : Analyzer
+    private var counting : Counting
     var state: GameState = .idle
     var currentTurn: Int = 0
     let maximumTurn: Int = 20
     let minimalGameCost : Int = 25
-    var balanceInRound: Int = 0
+   private var balanceInRound: Int = 0
     let history = History()
     let randomizer = IntRandomizer()
     var triplet = Triplet(randomizer: IntRandomizer())
@@ -79,6 +78,7 @@ class Game {
         balanceInRound += countPointsFromCombination
         currentTurn += 1
         history.addRecord(triplet: newTriplet, combination: analyzer.nameOfCombination.joined(separator: "\n"), pointsForTurn: countPointsFromCombination )
+        self.delegate?.didFinishTurn(triplet: newTriplet, combination: analyzer.nameOfCombination.joined(separator: "\n"), points: balanceInRound)
         self.triplet = newTriplet
         return true
     }
