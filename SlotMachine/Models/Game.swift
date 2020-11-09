@@ -7,6 +7,12 @@
 
 import Foundation
 
+protocol GameDelegate : class {
+    func startGame()
+    func nextTurn()
+}
+
+
 class Game {
     
     static let shared =  Game()
@@ -22,6 +28,7 @@ class Game {
         case playing
     }
     
+    weak var delegate : GameDelegate?
     var player : Player
     var analyzer : Analyzer
     var counting : Counting
@@ -71,7 +78,7 @@ class Game {
         //        player.balance += counting.currentPointsInRound
         balanceInRound += countPointsFromCombination
         currentTurn += 1
-        history.addRecord(triplet: newTriplet, combination: analyzer.nameOfCombination.joined(separator: "\n"), pointsForTurn: counting.countPointsFromCombination(combinations: analyzer.nameOfCombination) )
+        history.addRecord(triplet: newTriplet, combination: analyzer.nameOfCombination.joined(separator: "\n"), pointsForTurn: countPointsFromCombination )
         self.triplet = newTriplet
         return true
     }
