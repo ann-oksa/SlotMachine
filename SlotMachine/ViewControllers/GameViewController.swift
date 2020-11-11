@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController, GameDelegate {
+class GameViewController: UIViewController, GameDelegate, UITabBarControllerDelegate {
   
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var combinationLabel: UILabel!
@@ -23,13 +23,13 @@ class GameViewController: UIViewController, GameDelegate {
         Game.shared.startGame()
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.delegate = self
+    }
     
     @IBAction func goButtonAction(_ sender: UIButton) {
         Game.shared.nextTurn()
-       // numberLabel.text = Game.shared.triplet.convertTripletIntoString()
-       // combinationLabel.text = Game.shared.analyzer.nameOfCombination.joined(separator: "\n")
-      //  pointsLabel.text = String(Game.shared.balanceInRound)
-
     }
     
     func didFinishTurn(triplet: Triplet, combination: String, points: Int) {

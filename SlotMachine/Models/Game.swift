@@ -29,13 +29,13 @@ class Game {
     
     weak var delegate : GameDelegate?
     var player : Player
-   private var analyzer : Analyzer
+    private var analyzer : Analyzer
     private var counting : Counting
     var state: GameState = .idle
     var currentTurn: Int = 0
     let maximumTurn: Int = 20
     let minimalGameCost : Int = 25
-   private var balanceInRound: Int = 0
+    private var balanceInRound: Int = 0
     let history = History()
     let randomizer = IntRandomizer()
     var triplet = Triplet(randomizer: IntRandomizer())
