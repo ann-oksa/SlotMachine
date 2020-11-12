@@ -5,7 +5,7 @@
 //  Created by Anna Oksanichenko on 03.11.2020.
 //
 
-import Foundation
+import UIKit
 
 protocol GameDelegate : class {
     func didFinishTurn(triplet: Triplet, combination: String, points: Int)
@@ -58,15 +58,15 @@ class Game {
         player.balance -= minimalGameCost
         state = .playing
         currentTurn = 0
-        history.createNewRound()
         return true
     }
     
     func finishGame() -> Bool {
+        alertGameIsOver()
         state  = .idle
         player.balance += balanceInRound
+        history.add()
         balanceInRound = 0
-        history.storeData()
         return true
     }
     
@@ -91,7 +91,20 @@ class Game {
         self.triplet = newTriplet
         return true
     }
-    
-    
-    
+
+    func alertGameIsOver() {
+        let alertController = UIAlertController(title: "Game is over", message: "score: \(balanceInRound)", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        alertController.addAction(okButton)
+        var rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        if let navigationController = rootViewController as? UINavigationController {
+            rootViewController = navigationController.viewControllers.first
+        }
+        if let tabBarController = rootViewController as? UITabBarController {
+            rootViewController = tabBarController.selectedViewController
+        }
+        rootViewController?.present(alertController, animated: true, completion: nil)
+    }
 }
+
+
