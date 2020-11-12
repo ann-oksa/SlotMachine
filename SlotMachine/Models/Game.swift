@@ -58,15 +58,24 @@ class Game {
         player.balance -= minimalGameCost
         state = .playing
         currentTurn = 0
+        history.createNewRound()
         return true
     }
     
+    func finishGame() -> Bool {
+        state  = .idle
+        player.balance += balanceInRound
+        balanceInRound = 0
+        history.storeData()
+        return true
+    }
     
     
     func nextTurn() -> Bool {
         
         guard currentTurn < maximumTurn else {
             print("Round is over")
+            finishGame()
             return false
         }
         
@@ -83,9 +92,6 @@ class Game {
         return true
     }
     
-    func finishGame() -> Bool {
-        
-        return true
-    }
+    
     
 }

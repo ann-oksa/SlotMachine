@@ -20,7 +20,7 @@ class GameViewController: UIViewController, GameDelegate, UITabBarControllerDele
         
     
         Game.shared.delegate = self
-        Game.shared.startGame()
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {

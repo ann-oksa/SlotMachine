@@ -16,10 +16,9 @@ class ProfileViewController: UIViewController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = "Hello, \(player.name)"
-        balanceLabel.text = "Your balance: \(player.balance)"
-        
-        
+        nameLabel.text = "Hello, \(Game.shared.player.name)"
+        balanceLabel.text = "Your balance: \(Game.shared.player.balance)"
+               
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,14 +27,15 @@ class ProfileViewController: UIViewController, UITabBarControllerDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.leavingAlert()
+        self.tabBarController?.delegate = nil
     }
-    
+
     func leavingAlert(){
-        let alert = UIAlertController(title: "Alert", message: "You forgot to do something here", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        let alert = UIAlertController(title: "Let`s play!", message: "Your balance \(Game.shared.player.balance), \n game cost \(Game.shared.minimalGameCost)", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil)
         alert.addAction(alertAction)
-        let gameAction = UIAlertAction(title: "GO", style: UIAlertAction.Style.cancel, handler: { action in
+        let gameAction = UIAlertAction(title: "Play", style: UIAlertAction.Style.cancel, handler: { action in
+            Game.shared.startGame()
             self.tabBarController?.delegate = nil
             self.tabBarController?.selectedIndex = 1
         } )
@@ -43,11 +43,14 @@ class ProfileViewController: UIViewController, UITabBarControllerDelegate {
       
         self.present(alert, animated: true, completion: nil)
     }
-    
+
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-       
-        self.leavingAlert()
-        return false
+        if viewController == viewController as? GameViewController {
+            self.leavingAlert()
+            return false
+        } else {
+            return true
+        }
     }
     
 }
