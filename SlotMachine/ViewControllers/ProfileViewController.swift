@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController, UITabBarControllerDelegate {
         super.viewDidLoad()
         
         reloadDataForView()
-               
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -30,11 +30,12 @@ class ProfileViewController: UIViewController, UITabBarControllerDelegate {
         super.viewWillDisappear(animated)
         self.tabBarController?.delegate = nil
     }
-
+    
     func reloadDataForView(){
         nameLabel.text = "Hello, \(Game.shared.player.name)"
         balanceLabel.text = "Your balance: \(Game.shared.player.balance)"
     }
+    
     func leavingAlert(){
         let alert = UIAlertController(title: "Let`s play!", message: "Your balance \(Game.shared.player.balance), \n game cost \(Game.shared.minimalGameCost)", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil)
@@ -45,10 +46,10 @@ class ProfileViewController: UIViewController, UITabBarControllerDelegate {
             self.tabBarController?.selectedIndex = 1
         } )
         alert.addAction(gameAction)
-      
+        
         self.present(alert, animated: true, completion: nil)
     }
-
+    
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController == viewController as? GameViewController {
             self.leavingAlert()

@@ -65,14 +65,12 @@ class Game {
         alertGameIsOver()
         state  = .idle
         player.balance += balanceInRound
-        history.add()
+        history.addRoundIntoStorageAndCleanRound()
         balanceInRound = 0
         return true
     }
     
-    
     func nextTurn() -> Bool {
-        
         guard currentTurn < maximumTurn else {
             print("Round is over")
             finishGame()
@@ -83,7 +81,6 @@ class Game {
         newTriplet.changeDigitsOfTriplet()
         let getWinningCombination = analyzer.getWinningCombinationFromTriplet(triplet: newTriplet)
         let countPointsFromCombination = counting.countPointsFromCombination(combinations: getWinningCombination)
-        //        player.balance += counting.currentPointsInRound
         balanceInRound += countPointsFromCombination
         currentTurn += 1
         history.addRecord(triplet: newTriplet, combination: analyzer.nameOfCombination.joined(separator: "\n"), pointsForTurn: countPointsFromCombination )
@@ -91,7 +88,7 @@ class Game {
         self.triplet = newTriplet
         return true
     }
-
+    
     func alertGameIsOver() {
         let alertController = UIAlertController(title: "Game is over", message: "score: \(balanceInRound)", preferredStyle: .alert)
         let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)

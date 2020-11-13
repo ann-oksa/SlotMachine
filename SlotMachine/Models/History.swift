@@ -9,29 +9,33 @@ import Foundation
 // в истории хранятся раунды и каждый ход в раунде
 
 class History {
-    // массив массивов с ходами
     
-    
-    var storage = [[DataForCell]]()
-  
-    
-    var data : [DataForCell] = []
+    var storage : [Round] = []
+    var round = Round()
     
     func addRecord(triplet: Triplet, combination: String, pointsForTurn: Int )  {
         let dataForCell = DataForCell(triplets: triplet, description: combination, points: pointsForTurn)
-        data.append(dataForCell)
-        
+        round.addDataForCell(dataForCell)
     }
-    func add()  {
-        storage.append(data)
-        data = []
+    
+    func addRoundIntoStorageAndCleanRound()  {
+        storage.append(round)
+        round.reset()
     }
-
     
 }
 
-
-
+struct Round {
+    public private(set) var turns : [DataForCell] = []
+    
+    mutating func addDataForCell(_ dataForCell: DataForCell) {
+        self.turns.append(dataForCell)
+    }
+    
+    mutating func reset() {
+        self.turns = []
+    }
+}
 
 struct DataForCell {
     var triplets : Triplet

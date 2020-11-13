@@ -33,8 +33,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let turns: [DataForCell] = Game.shared.history.storage[section]
-        let turnsCount = turns.count
+        let round: Round = Game.shared.history.storage[section]
+        let turnsCount = round.turns.count
         return turnsCount
     }
     
@@ -44,8 +44,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HistoryCell.reuseIdentifier, for: indexPath) as! HistoryCell
-        let turns: [DataForCell] = Game.shared.history.storage[indexPath.section]
-        let dataForCell: DataForCell = turns[indexPath.row]
+        let round: Round = Game.shared.history.storage[indexPath.section]
+        let dataForCell: DataForCell = round.turns[indexPath.row]
         cell.showDataInCell(triplet: dataForCell.triplets, description: dataForCell.description, points: dataForCell.points)
         return cell
     }
