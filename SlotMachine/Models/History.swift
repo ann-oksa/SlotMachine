@@ -22,7 +22,6 @@ class History {
         storage.append(round)
         round.reset()
     }
-    
 }
 
 struct Round {

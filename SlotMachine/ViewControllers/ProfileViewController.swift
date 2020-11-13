@@ -31,12 +31,12 @@ class ProfileViewController: UIViewController, UITabBarControllerDelegate {
         self.tabBarController?.delegate = nil
     }
     
-    func reloadDataForView(){
+    func reloadDataForView() {
         nameLabel.text = "Hello, \(Game.shared.player.name)"
         balanceLabel.text = "Your balance: \(Game.shared.player.balance)"
     }
     
-    func leavingAlert(){
+    func leavingAlert() {
         let alert = UIAlertController(title: "Let`s play!", message: "Your balance \(Game.shared.player.balance), \n game cost \(Game.shared.minimalGameCost)", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil)
         alert.addAction(alertAction)
