@@ -7,15 +7,15 @@
 
 import UIKit
 
-class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarControllerDelegate {
+class HistoryViewController: UIViewController, UITableViewDelegate, UITabBarControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    private var dataSource = HistoryDataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
-        tableView.dataSource = self
+        tableView.dataSource = dataSource
         
         let nib = UINib.init(nibName: HistoryCell.reuseIdentifier, bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: HistoryCell.reuseIdentifier)
@@ -33,32 +33,10 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tabBarController?.delegate = nil
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return Game.shared.history.storage.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let round: Round = Game.shared.history.storage[section]
-        let turnsCount = round.turns.count
-        return turnsCount
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: HistoryCell.reuseIdentifier, for: indexPath) as! HistoryCell
-        let round: Round = Game.shared.history.storage[indexPath.section]
-        let dataForCell: DataForCell = round.turns[indexPath.row]
-        cell.showDataInCell(triplet: dataForCell.triplets, description: dataForCell.description, points: dataForCell.points)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Round \(section) "
-    }
-    
+
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = UIColor.black
         let header = view as! UITableViewHeaderFooterView

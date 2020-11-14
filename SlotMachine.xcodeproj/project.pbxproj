@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2258690B255F59DE00B5DF9D /* HistoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258690A255F59DE00B5DF9D /* HistoryDataSource.swift */; };
 		CA111148254C2D43002B8B41 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA111147254C2D43002B8B41 /* History.swift */; };
 		CA11117725506A7D002B8B41 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11117625506A7D002B8B41 /* HistoryCell.swift */; };
 		CA11117F25506A8D002B8B41 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA11117E25506A8D002B8B41 /* HistoryCell.xib */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2258690A255F59DE00B5DF9D /* HistoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDataSource.swift; sourceTree = "<group>"; };
 		CA111147254C2D43002B8B41 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		CA11117625506A7D002B8B41 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		CA11117E25506A8D002B8B41 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				CA6353BC2542B5E0008684BF /* ProfileViewController.swift */,
 				CA6353A52540613A008684BF /* GameViewController.swift */,
 				CA6353CF2542F92F008684BF /* HistoryViewController.swift */,
+				2258690A255F59DE00B5DF9D /* HistoryDataSource.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				CA111148254C2D43002B8B41 /* History.swift in Sources */,
 				CA6353D02542F92F008684BF /* HistoryViewController.swift in Sources */,
 				CA6353DA2546B6F5008684BF /* WinningCombinations.swift in Sources */,
+				2258690B255F59DE00B5DF9D /* HistoryDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
