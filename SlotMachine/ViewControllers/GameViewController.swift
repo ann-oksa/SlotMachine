@@ -37,5 +37,12 @@ class GameViewController: UIViewController, GameDelegate, UITabBarControllerDele
         combinationLabel.text = combination
         pointsLabel.text = String(points)
     }
+    
+    func alertGameIsOver(with balance: Int) {
+        let alertController = UIAlertController(title: "Game is over", message: "score: \(balance)", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        alertController.addAction(okButton)
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
 

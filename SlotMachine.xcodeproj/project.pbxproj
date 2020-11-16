@@ -29,6 +29,7 @@
 		CA6353D52546B5B2008684BF /* Analyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353D42546B5B1008684BF /* Analyzer.swift */; };
 		CA6353DA2546B6F5008684BF /* WinningCombinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353D92546B6F5008684BF /* WinningCombinations.swift */; };
 		CA6353E22546C6A0008684BF /* Triplet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6353E12546C6A0008684BF /* Triplet.swift */; };
+		CA840C692562615C007EAE3D /* BaseTapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA840C682562615B007EAE3D /* BaseTapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		CA6353D42546B5B1008684BF /* Analyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analyzer.swift; sourceTree = "<group>"; };
 		CA6353D92546B6F5008684BF /* WinningCombinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningCombinations.swift; sourceTree = "<group>"; };
 		CA6353E12546C6A0008684BF /* Triplet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triplet.swift; sourceTree = "<group>"; };
+		CA840C682562615B007EAE3D /* BaseTapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				CA6353A52540613A008684BF /* GameViewController.swift */,
 				CA6353CF2542F92F008684BF /* HistoryViewController.swift */,
 				2258690A255F59DE00B5DF9D /* HistoryDataSource.swift */,
+				CA840C682562615B007EAE3D /* BaseTapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				CA1111AE2552B1D9002B8B41 /* ReusableView.swift in Sources */,
 				CA6353E22546C6A0008684BF /* Triplet.swift in Sources */,
 				CA6353BD2542B5E1008684BF /* ProfileViewController.swift in Sources */,
+				CA840C692562615C007EAE3D /* BaseTapViewController.swift in Sources */,
 				CA1111902551BCF3002B8B41 /* Game.swift in Sources */,
 				CA63537525405F14008684BF /* SceneDelegate.swift in Sources */,
 				CA111148254C2D43002B8B41 /* History.swift in Sources */,

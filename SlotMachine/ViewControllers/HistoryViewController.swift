@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoryViewController: UIViewController, UITableViewDelegate, UITabBarControllerDelegate {
+class HistoryViewController: BaseTapViewController, UITableViewDelegate, UITabBarControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     private var dataSource = HistoryDataSource()
@@ -41,19 +41,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITabBarCont
         view.tintColor = UIColor.black
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
-    }
-    
-    func leavingAlert() {
-        let alert = UIAlertController(title: "Let`s play!", message: "Your balance \(Game.shared.player.balance), \n game cost \(Game.shared.minimalGameCost)", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil)
-        alert.addAction(alertAction)
-        let gameAction = UIAlertAction(title: "Play", style: UIAlertAction.Style.cancel, handler: { action in
-            Game.shared.startGame()
-            self.tabBarController?.delegate = nil
-            self.tabBarController?.selectedIndex = 1
-        } )
-        alert.addAction(gameAction)
-        self.present(alert, animated: true, completion: nil)
     }
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
